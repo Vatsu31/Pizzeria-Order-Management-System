@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<VBox alignment="CENTER" spacing="20" style="-fx-background-color: #e0f7fa;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="controllers.MainController">
+    <Label text="RU Pizza Main Menu" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #1976d2;"/>
+    <GridPane hgap="20" vgap="20">
+        <!-- Chicago Style Button with Image -->
+        <Button onAction="#openChicagoPizzaView" GridPane.rowIndex="0" GridPane.columnIndex="0">
+            <graphic>
+                <ImageView fx:id="chicagoImage" fitWidth="150" fitHeight="150"/>
+            </graphic>
+        </Button>
+        <Label text="Chicago Style" GridPane.rowIndex="1" GridPane.columnIndex="0" style="-fx-text-fill: #000000;"/>
+
+        <!-- NY Style Button with Image -->
+        <Button onAction="#openNYPizzaView" GridPane.rowIndex="0" GridPane.columnIndex="1">
+            <graphic>
+                <ImageView fx:id="nyImage" fitWidth="150" fitHeight="150"/>
+            </graphic>
+        </Button>
+        <Label text="NY Style" GridPane.rowIndex="1" GridPane.columnIndex="1" style="-fx-text-fill: #000000;"/>
+
+        <!-- Orders Placed Button with Image -->
+        <Button onAction="#openOrdersPlacedView" GridPane.rowIndex="2" GridPane.columnIndex="0">
+            <graphic>
+                <ImageView fx:id="ordersImage" fitWidth="150" fitHeight="150"/>
+            </graphic>
+        </Button>
+        <Label text="Orders Placed" GridPane.rowIndex="3" GridPane.columnIndex="0" style="-fx-text-fill: #000000;"/>
+
+        <!-- Current Order Button with Image -->
+        <Button onAction="#openCurrentOrderView" GridPane.rowIndex="2" GridPane.columnIndex="1">
+            <graphic>
+                <ImageView fx:id="cartImage" fitWidth="150" fitHeight="150"/>
+            </graphic>
+        </Button>
+        <Label text="Current Order" GridPane.rowIndex="3" GridPane.columnIndex="1" style="-fx-text-fill: #000000;"/>
+    </GridPane>
+</VBox>

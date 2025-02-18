@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane style="-fx-background-color: #e0f7fa;" xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controllers.CurrentOrderController">
+    <top>
+        <VBox alignment="CENTER" spacing="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <Label text="Current Order" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Order Number"/>
+                <TextField fx:id="orderNumberField" editable="false"
+                           prefWidth="150"/>
+            </HBox>
+        </VBox>
+    </top>
+
+    <center>
+        <VBox spacing="10">
+            <padding>
+                <Insets top="0" right="10" bottom="10" left="10"/>
+            </padding>
+            <ListView fx:id="currentOrderList" VBox.vgrow="ALWAYS"/>
+        </VBox>
+    </center>
+
+    <bottom>
+        <VBox spacing="10">
+            <padding>
+                <Insets top="0" right="10" bottom="10" left="10"/>
+            </padding>
+
+            <HBox spacing="20" alignment="CENTER_LEFT">
+                <HBox spacing="5" alignment="CENTER_LEFT">
+                    <Label text="subtotal $"/>
+                    <TextField fx:id="subtotalField" editable="false"
+                               prefWidth="100"/>
+                </HBox>
+
+                <HBox spacing="5" alignment="CENTER_LEFT">
+                    <Label text="sales tax $"/>
+                    <TextField fx:id="salesTaxField" editable="false"
+                               prefWidth="100"/>
+                </HBox>
+
+                <Button text="Remove Pizza" onAction="#removePizza"/>
+            </HBox>
+
+            <HBox spacing="20" alignment="CENTER_LEFT">
+                <HBox spacing="5" alignment="CENTER_LEFT">
+                    <Label text="order total $"/>
+                    <TextField fx:id="orderTotalField" editable="false"
+                               prefWidth="150"/>
+                </HBox>
+
+                <Button text="Place Order" onAction="#placeOrder"
+                        style="-fx-background-color: #4285f4; -fx-text-fill: white;"/>
+                <Button text="Clear Order" onAction="#clearOrder"/>
+            </HBox>
+        </VBox>
+    </bottom>
+</BorderPane>
